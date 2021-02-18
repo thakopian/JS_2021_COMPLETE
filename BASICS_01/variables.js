@@ -4,7 +4,9 @@
 let js2 = 'amazing';
 console.log(40 + 8 + 23 - 10);
 
+
 // value basics //
+
 
 // Value is the most fundamental piece of data, the smallest piece of information
 
@@ -12,7 +14,9 @@ console.log(40 + 8 + 23 - 10);
 
 // values like String and integers can be stored in a variable and passed into other functions 
 
+
 // create variables with values // 
+
 
 // declare a variable and assign value of a string name
 let firstName = 'Tadeh'
@@ -166,5 +170,88 @@ console.log(y, z);
 const averageAge = (ageJonas + ageTadeh) / 2
 console.log(ageJonas, ageTadeh, averageAge);
 
-// strings and tempalte literals
 
+
+// strings and template literals //
+
+
+
+// variables with strings and numbers
+
+const myFirstName = 'Tadeh';
+const myJob = 'Architect';
+const birthYearMe = 1986;
+const currentYear = 2021;
+
+// variable made of concatenated variables printed in the console
+
+const Tadeh = "I'm " + myFirstName +  '. a ' + (currentYear - birthYearMe) + ' year old ' + myJob + '!';
+console.log(Tadeh);
+
+// using string literals in JS instead of concatenation and quotes
+
+const tadehNew = `I'm ${myFirstName}, a ${currentYear - birthYearMe} year old ${myJob}!!`;
+console.log(tadehNew);
+
+// writing text with backticks intead of quotes
+
+console.log(`This statement is just a string in backticks`);
+
+// ES5 uses \n\ and return to create multi-line statement prints
+
+console.log(`String with \n\
+ES5 multi-line \n\
+text`);
+
+// ES6 just require a return in the statement for multi-line text
+
+console.log(`String with
+ES6 multi-line
+text`);
+
+
+// conditional statements - if / else //
+
+
+// control structure with if / else, string literals and comparison operators
+
+const ageCurrent = 15;
+
+if (ageCurrent >= 18) {
+    console.log(`Bill can start a driving test`);
+} else {
+    const yearsLeft = 18 - ageCurrent;
+    console.log(`Bill is too young, wait another ${yearsLeft} years `)
+};
+
+// conditional statement with a variable value created by the if / else control statement
+
+const birthYearCentury = 1998;
+
+let century;
+if(birthYearCentury <= 2000) {
+    century = 20;
+} else {
+    century = 21;
+}
+console.log(century);
+
+
+// type conversion and coercion //
+
+// type conversion is explicit type change
+// type coercion is js doing the change behind the scenes for you
+
+
+// conversion example 
+
+const inputYear = '1991';
+console.log(Number(inputYear), inputYear);
+console.log(Number(inputYear) + 18);
+
+console.log(Number('Jonas'));
+console.log(typeof NaN);
+
+console.log(String(23), 23);
+
+// coercion example

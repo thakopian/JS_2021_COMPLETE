@@ -46,3 +46,4 @@ console.log(BMIjohn);
 // set comparison operator for boolean statement
 const markHigherBMI  = BMImark > BMIjohn;
 console.log(markHigherBMI);
+
