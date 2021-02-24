@@ -243,7 +243,8 @@ console.log(century);
 // type coercion is js doing the change behind the scenes for you
 
 
-// conversion example 
+// type conversion example 
+// you modify the type
 
 const inputYear = '1991';
 console.log(Number(inputYear), inputYear);
@@ -254,4 +255,57 @@ console.log(typeof NaN);
 
 console.log(String(23), 23);
 
-// coercion example
+// type coercion example
+// js modifies the type for you
+
+// entire statement becomes a string by converting numbers to strings for addition
+console.log('I am ' + 23 + ' years old');
+console.log('I am ' + String(23) + ' years old');
+
+// with substractions the strings can become numbers
+console.log('23' - '10' - '3');
+
+// with division the strings can become numbers
+console.log('23' / '10');
+
+// with logival operators the strings can become numbers
+console.log('23'  > '10');
+
+// test with n values
+let n = '1' + 1; // '11' becomes string
+n = n -1; // 11 becomes number then subtract 1
+console.log(n);
+
+// more examples of how types can change with coercion
+// 2 + 3 + 4 + '5' // '95'
+// 10'-'4'-'3'-2 +'5' //'15'
+
+// BIG LESSON - type coercion can create bugs if you are not careful so pay attention to these types in operations as you write the code
+
+
+// Truty and Falsy value booleans //
+
+// 5 falsy values: 0, "", undefined, null, NaN,
+
+// test with explicit booleans to find truthy and falsy values
+
+console.log(Boolean(0)); // false bc 0 = false
+console.log(Boolean(undefined)); // false bc undefined != true
+console.log(Boolean('Jonas')); // true bc Jonas exists as a string
+console.log(Boolean({})); // true bc there is a value in the braces
+console.log(Boolean('')); // false bc there is nothing in the string
+
+// functions and truthy and falsy values
+const money = 0; // change to value >0 for a different result
+if (money) {
+    console.log("Don't spend it all!);");
+} else {
+    console.log('You should get a job!');
+}
+
+let height: // heght is currenlty undefined and will be converted to a boolean which sets undefined as false
+if (height) {
+    console.log('Yay! height is defined);
+} else {
+    console.log('Height is undefined');
+}
