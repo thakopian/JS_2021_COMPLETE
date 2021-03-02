@@ -119,7 +119,7 @@ console.log(ageJonas, ageTadeh);
 
 console.log(ageJonas * 2, ageTadeh / 10, 2 ** 3);
 
-// concatenate strings vakues from variables
+// concatenate strings values from variables
 
 const firstName1 = 'Tadeh'
 const lastName1 = 'Hakopian'
@@ -303,9 +303,60 @@ if (money) {
     console.log('You should get a job!');
 }
 
-let height: // heght is currenlty undefined and will be converted to a boolean which sets undefined as false
+/* code is creating errors in console to demonstrate the boolean example so the rest of the code will be commented out
+
+let height // heght is currenlty undefined and will be converted to a boolean which sets undefined as false
 if (height) {
     console.log('Yay! height is defined);
 } else {
     console.log('Height is undefined');
 }
+*/
+
+
+// Equality operators == vs === //
+
+
+// = is assignment operator for variable to a value
+// == is  loose equality operator - compares two values of different data types with type coercion
+// === is strict comparison operator for same data types - no type coercion
+
+const ageAssign = '18';
+if(ageAssign === 18) console.log('you are now an adult :D (strict)');
+
+if(ageAssign == 18) console.log('you are now an adult :D (loose) ');
+
+
+// example of where loose equality helps - input values 
+// if you leave it without a conversion then any input works
+
+/* // commented out to avoid prompts in console
+const favorite = prompt("what's your favorite number");
+console.log(favorite);
+console.log(typeof favorite);
+
+if (favorite == 100) { // '100' = 100
+    console.log('100 is a good number!')
+}
+
+*/ 
+
+// if you use strict equality then only that type will work and you have to modify your code to make sure you convert types to that value
+// also note the else if statements for more operations in your code
+// commented out to avoid prompts in console
+const favorite = Number(prompt("what's your favorite number"));
+console.log(favorite);
+console.log(typeof favorite);
+
+if (favorite === 100) { // '100' != 100
+    console.log('100 is a good number!')
+} else if(favorite === 10) {
+    console.log('10 is also a good number')
+} else if(favorite === 50) {
+    console.log('50 is also a good number')    
+} else {
+    console.log('Numbner is not 100 or 10 or anything else approved')
+}
+
+// strict operator for not equal values
+if (favorite !== 100) console.log('Why not 100?');
