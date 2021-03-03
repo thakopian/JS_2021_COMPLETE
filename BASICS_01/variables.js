@@ -344,6 +344,10 @@ if (favorite == 100) { // '100' = 100
 // if you use strict equality then only that type will work and you have to modify your code to make sure you convert types to that value
 // also note the else if statements for more operations in your code
 // commented out to avoid prompts in console
+
+
+/* // commented out to avoid prompts in console
+
 const favorite = Number(prompt("what's your favorite number"));
 console.log(favorite);
 console.log(typeof favorite);
@@ -360,3 +364,40 @@ if (favorite === 100) { // '100' != 100
 
 // strict operator for not equal values
 if (favorite !== 100) console.log('Why not 100?');
+
+*/
+
+
+// boolean logic //
+
+// AND, OR, NOT operators for statements
+// AND is when all are true = &&
+// OR is when one is true = ||
+// NOT is when none are true or invert a value = !
+
+// examples with age conditions and logical operators
+// you set a variable set to a boolean true/false and create a statement to check in the console.log
+const hasDriversLicense = true; // A
+const hasGoodVision = true; // B
+const isTired = false; // C
+
+
+console.log(hasDriversLicense && hasGoodVision);
+console.log(hasDriversLicense || hasGoodVision);
+console.log(!hasDriversLicense);
+
+// place the condition in the if statement () and run a conditional function
+// make sure the A and B values for the variables are both set to true before running the code
+
+if(hasDriversLicense && hasGoodVision) {
+    console.log('Sarah is a good driver!');
+} else {
+    console.log('Someone else should drive...');
+}
+
+// if all values are not true with && operator then the whole result is not true
+console.log(hasDriversLicense && hasGoodVision && isTired);
+
+// Invert with not ! operator to invert a boolean value
+// understand you are basically changing the condition which is in a way like lying so be mindful of how you use it
+console.log(hasDriversLicense && hasGoodVision && !isTired);
