@@ -401,3 +401,38 @@ console.log(hasDriversLicense && hasGoodVision && isTired);
 // Invert with not ! operator to invert a boolean value
 // understand you are basically changing the condition which is in a way like lying so be mindful of how you use it
 console.log(hasDriversLicense && hasGoodVision && !isTired);
+
+
+// switch statement //
+
+// can be used in place of else statements
+// Switch(variable) {case}
+// case is nested into the switch and includes colon : after the line followed by nested code
+// break statement - stops executing the code in the previous line - usefule with switch statements
+
+// set a variable and a beginning value
+const weekDay = 'monday'; // change the day to get a different result below
+
+// create a switch statement with that variable
+switch (weekDay) {
+    case 'monday': // result if the case is a monday
+        console.log('Study Dynamo today');
+        console.log('Review last week notes');
+        break; // stop executing code
+    case 'tuesday':
+        console.log('One on one calls');
+        break; 
+    case 'wednesday':
+    case 'thursday':
+        console.log('team calls');
+        break;    
+    case 'Friday':
+        console.log('send emails'); 
+        break;
+    case 'Saturday':
+    case 'Sunday':        
+        console.log('hike day'); 
+        break;   
+    default: // if nothing matches the cases here is the default message
+        console.log('not a valid day');                        
+}

@@ -30,25 +30,21 @@ console.log(x);
 */
 
 // assign variables
-let MarkWeight = 78;
-let MarkHeight = 1.95;
-let JohnWeight = 85;
-let JohnHeight = 1.88;
+let dAvg = ((97+112+101)/3);
+let kAvg = ((109+95+106)/3);
 
-// calculate BMI for each person
-BMImark = (MarkWeight / (MarkHeight ** 2)); //= MarkWeight / (MarkHeight * Markheight) 
-console.log(BMImark);
+//print values to see the results
+console.log(dAvg, kAvg);
 
-BMIjohn = (JohnWeight / (JohnHeight ** 2)); // = JohnWeight / (JohnHeight * JohnHeight) 
-console.log(BMIjohn);
+// set if else condition based on calculation 
 
-
-// set if else condition based on calculation  
-// add string literal for console log results
-
-if (BMImark > BMIjohn) {
-    console.log(`Mark has a higher BMI score of ${BMImark}`);
+if (dAvg > kAvg && dAvg >= 100) {
+    console.log('Dolphins win!');
+} else if (kAvg > dAvg && kAvg >= 100) {
+    console.log('Koalas win!');
+} else if (dAvg === kAvg && kAvg >= 100 && dAvg >= 100) {
+    console.log('It is a draw!');     
 } else {
-    console.log(`John has a higher BMI score of ${BMIjohn}`);
+    console.log('No one wins');     
 };
 
