@@ -436,3 +436,62 @@ switch (weekDay) {
     default: // if nothing matches the cases here is the default message
         console.log('not a valid day');                        
 }
+
+// you can do something similar to a switch case using if else statements
+// depending on how you structure your code and how you approach the problem there are many ways to create a solution that works
+
+if (weekDay === 'monday') {
+    console.log('study for Dynamo Today');
+    console.log('review last week notes');
+} else if (weekDay === 'tuesday') {
+    console.log('one on one calls');    
+} else if (weekDay === 'wednesday' || weekDay === 'thursday') {
+    console.log('team calls');
+} else if (weekDay === 'friday') {
+    console.log('send emails');
+} else if (weekDay === 'saturday' || weekDay === 'sunday') {
+    console.log('hike day');
+} else {
+    console.log('Not a valid day');
+}
+
+
+
+// statements and expressions //
+
+// expressions are code that  produce a value // 2+3 = 5 
+// statements are declarations of code that produce action but not values on their own
+// statements usually end with the semi colon ; 
+
+
+
+// the conditional ternary operator //
+
+
+// compacts an if else statement into one line
+// not a replacement for more complex conditional statements but useful for quick decision making without writing a lot of code
+
+// set your variable
+const ternAge = 23;
+
+//write the ternary as as function, condition, question mark ? then  outcome 1 followed by  outcome 2 separated by a colon :
+ternAge >= 18 ? console.log('Drink some beer') : console.log('Drink some water');
+
+//ternary can then be set to a variable and use in another place of the code
+const ternDrink = ternAge >= 18 ? 'drink some beer' : 'drink some water' ;
+console.log(ternDrink);
+
+//ternary operator can place condition in the template literals
+console.log(`I like to drink ${ternAge >=18 ? 'beer' : 'water'}`);
+
+// ternary replaces typical if else statement and saves time
+let ternDrink2;
+if (ternAge >= 18) {
+    ternDrink2 = 'wine';
+} else {
+    ternDrink2 = 'water';
+}
+console.log(ternDrink2);
+
+
+// END OF PART 1 FUNDAMENTALS
