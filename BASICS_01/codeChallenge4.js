@@ -27,14 +27,20 @@ console.log(x);
 */
 
 // assign variables
-let dAvg = ((97+112+101)/3);
-let kAvg = ((109+95+106)/3);
+bill1 = 250
+bill2 = 40
+bill3 =  430
+
+
+
+const ternTip = (bill1 >= 50) ? bill1 * 0.15 : bill1 * 0.2;
+
 
 //print values to see the results
-console.log(dAvg, kAvg);
+console.log(ternTip);
 
 // set if else condition based on calculation 
-
+/*
 if (dAvg > kAvg && dAvg >= 100) {
     console.log('Dolphins win!');
 } else if (kAvg > dAvg && kAvg >= 100) {
@@ -45,3 +51,15 @@ if (dAvg > kAvg && dAvg >= 100) {
     console.log('No one wins');     
 };
 
+if(hasDriversLicense && hasGoodVision) {
+    console.log('Sarah is a good driver!');
+} else {
+    console.log('Someone else should drive...');
+}
+
+const ternDrink = ternAge >= 18 ? 'drink some beer' : 'drink some water' ;
+console.log(ternDrink);
+
+console.log(`I like to drink ${ternAge >=18 ? 'beer' : 'water'}`);
+
+*/
