@@ -31,13 +31,12 @@ bill1 = 250
 bill2 = 40
 bill3 =  430
 
-
-
-const ternTip = (bill1 >= 50) ? bill1 * 0.15 : bill1 * 0.2;
+// ternary operator in this case states a variable then the low end of the value and the high end of the value (list variable each time) followed by the ternary
+const ternTip = bill1 <= 300 && bill1 >= 50 ? bill1 * 0.15 : bill1 * 0.2;
 
 
 //print values to see the results
-console.log(ternTip);
+console.log(`the bill was ${bill1} and the tip was ${ternTip} with a total value of ${bill1 + ternTip}`);
 
 // set if else condition based on calculation 
 /*
