@@ -83,5 +83,70 @@ console.log('did you know console.log is a builtin function?');
 // functions are essential for DRY code - Don't repeat yourself
 // the more you use it the more clean and orderly your code will be
 
-//  FUNCTION DECLARATIONS VS EXPRESSIOSN //
+//  FUNCTION DECLARATIONS VS EXPRESSION //
+
+// Declarations - functions named that return a value
+
+// Expresssions - functions in a variable that return a value
+
+
+// Calculating values returned from a function
+// All functions end up as values in JS
+// format of function is different but the arguments and console log are the same
+
+
+//  DECLARATION EX
+// Create a named function with a return value
+// Then pass the value to a variable with an argument
+
+function calcAge1(birthyear) {
+    return 2037 - birthyear; 
+}
+
+const ageDeclare = calcAge1(1986);
+
+// FUNCTION EX
+// Store the function into a variable 
+// the function itself has no name
+
+const calcAge2 = function (birthyear) {
+    return 2037 - birthyear;
+}
+
+const ageFunction = calcAge2(1986);
+
+//return values of each type of function
+
+console.log(ageDeclare, ageFunction);
+
+// Choosing a declarative vs expressive function is a matter of preference
+// some coders like to express the function in a variable so it is easy to reference later to get the entire function
+// some coders like declared functions with a name 
+// you need to know both given different coder preferences
+
+
+// ARROW FUNCTION //
+
+// Arrow functions are short and fast to write functions
+// no curly braces {}, no return explicitly written, no need to write even function
+// useful for short one off functions without much complexity using one line of code and one parameter
+
+// FORMAT
+// write the function name, arrow (=>) return value only then the argument in parentheses ()
+// to store the data place the arrow in a variable otherwise write it without a variable assignment
+
+// single line arrow function
+const calcAge3 = birthyear => 2037 - birthyear;
+const ageArrow = calcAge3(1986);
+console.log(ageArrow);
+
+// multi-line arrow function
+const yearToRetire = birthyear => {
+    const age4 = 2037 - birthyear;
+    const retirement = 65 - age4;
+    return retirement;
+}
+
+console.log(yearToRetire(1986));
+
 
