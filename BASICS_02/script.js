@@ -95,7 +95,7 @@ console.log('did you know console.log is a builtin function?');
 // format of function is different but the arguments and console log are the same
 
 
-//  DECLARATION EX
+// DECLARATION FUNCTION EX
 // Create a named function with a return value
 // Then pass the value to a variable with an argument
 
@@ -105,8 +105,8 @@ function calcAge1(birthyear) {
 
 const ageDeclare = calcAge1(1986);
 
-// FUNCTION EX
-// Store the function into a variable 
+// EXPRESSIVE FUNCTION EX
+// Store the function into a NAMED variable 
 // the function itself has no name
 
 const calcAge2 = function (birthyear) {
@@ -128,11 +128,11 @@ console.log(ageDeclare, ageFunction);
 // ARROW FUNCTION //
 
 // Arrow functions are short and fast to write functions
-// no curly braces {}, no return explicitly written, no need to write even function
+// no curly braces {}, no return explicitly written, no need to write even function keyword
 // useful for short one off functions without much complexity using one line of code and one parameter
 
 // FORMAT
-// write the function name, arrow (=>) return value only then the argument in parentheses ()
+// write the function name, arrow (=>) return value and only then the argument in parentheses ()
 // to store the data place the arrow in a variable otherwise write it without a variable assignment
 
 // single line arrow function
@@ -140,7 +140,10 @@ const calcAge3 = birthyear => 2037 - birthyear;
 const ageArrow = calcAge3(1986);
 console.log(ageArrow);
 
-// multi-line arrow function
+// multi-line arrow function with 1 return statement
+// requires RETURN statement written with more than one line in => functions
+// have to use braces {} for remainder of function nesting
+// still do not have to use FUNCTION keyword
 const yearToRetire = birthyear => {
     const age4 = 2037 - birthyear;
     const retirement = 65 - age4;
@@ -150,3 +153,47 @@ const yearToRetire = birthyear => {
 console.log(yearToRetire(1986));
 
 
+// multi-line arrow function with 2 return statements
+// same rules as single return in arrow function with changes to syntax
+// arguments need parentheses () and return requires template literals `` in this case
+// for this example retirement2 is not returned on its own, it goes into the literal
+const yearToRetire2 = (birthyear2, firstName2) => {
+    const age4 = 2037 - birthyear2;
+    const retirement2 = 65 - age4;
+    return `${firstName2} retires in ${retirement2} years`;
+}
+
+console.log(yearToRetire2(1986, 'Tadeh'));
+console.log(yearToRetire2(1993, 'Tomik'));
+
+
+// using arrow functions cannot use 'this' keyword unlike the declarative and expressive functions
+// if you are writing a regular simple function then arrow functions are very useful
+
+
+// CALLING A FUNCTION FROM ANOTHER FUNCTION //
+
+
+// cut the fruit into many pieces using calls to other functions
+// start with the function that will do the cutting
+// add to other functions variables that will work on the actual cutting
+// then call the cutting functions with your main function
+// data flow is important to organizing the code
+
+
+function cutFruitPieces(fruit) {
+    return fruit * 4;
+}
+
+
+function fruitProcessorCall(apples, oranges) {
+    const applePieces = cutFruitPieces(apples);
+    const orangePieces = cutFruitPieces(oranges);
+
+    const juice = `This Juice contains ${applePieces} apple pieces and ${orangePieces} orange pieces.`;
+    return juice;
+}
+console.log(fruitProcessorCall(2,3));
+
+// Call functions are good example of DRY principles for reusing existing code with new code instead of repetitive code work
+// for more review look at this video - https://www.udemy.com/share/101WfeCEccd1tTQw==/
