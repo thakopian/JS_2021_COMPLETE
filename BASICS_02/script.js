@@ -197,3 +197,36 @@ console.log(fruitProcessorCall(2,3));
 
 // Call functions are good example of DRY principles for reusing existing code with new code instead of repetitive code work
 // for more review look at this video - https://www.udemy.com/share/101WfeCEccd1tTQw==/
+
+
+
+// REVIEW FUNCTIONS //
+
+
+//  Function Basics with if/else statments, calls and other operations working together into one function
+
+/* consider rebuilding the entire function with different variable names to avoid issues in the console
+
+const calcAge4 = function (birthyear4) {
+    return 2037 - birthyear4;
+}
+
+const yearToRetire4 = function (birthyear4, firstName) {
+    const age5 = calcAge4(birthyear4);
+    const retirement4 = 65 - age5;
+
+    if(retirement4 > -0) {
+        reutrn retirement4;        
+    } else {
+        return -1; // standard return number with no specific meaning
+    }
+
+
+    //return `${firstName3} retires in ${retirement3} years`;
+}
+
+console.log(yearToRetire4(1986, 'Tadeh'));
+console.log(yearToRetire4(1981, 'Andre'));
+
+
+*/
