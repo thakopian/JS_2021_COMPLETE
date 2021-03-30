@@ -205,7 +205,7 @@ console.log(fruitProcessorCall(2,3));
 
 //  Function Basics with if/else statments, calls and other operations working together into one function
 
-/* consider rebuilding the entire function with different variable names to avoid issues in the console
+//consider rebuilding the entire function with different variable names to avoid issues in the console
 
 const calcAge4 = function (birthyear4) {
     return 2037 - birthyear4;
@@ -215,13 +215,13 @@ const yearToRetire4 = function (birthyear4, firstName) {
     const age5 = calcAge4(birthyear4);
     const retirement4 = 65 - age5;
 
-    if(retirement4 > -0) {
-        reutrn retirement4;        
+    if (retirement4 > 0) {
+        console.log(`${firstName} retires in ${retirement4} years`);
+        return retirement4; // return statement        
     } else {
-        return -1; // standard return number with no specific meaning
+        return -1; // -1 is standard return number with no specific meaning
+        console.log(`${firstName} has already retired`);
     }
-
-
     //return `${firstName3} retires in ${retirement3} years`;
 }
 
@@ -229,4 +229,35 @@ console.log(yearToRetire4(1986, 'Tadeh'));
 console.log(yearToRetire4(1981, 'Andre'));
 
 
-*/
+// Different types of functions for review
+
+// These examples won't execute anything because birthyear isn't given
+
+// Declarative
+function calcAgeDeclare(birthyear) {
+    return 2037 - birthyear;
+};
+
+// Expressive
+const calAgeExpress = function (birthyear) {
+    return 2037 - birthyear;
+};
+
+// Arrow
+const calcAgeArrow = birthyear => 2037 - birthyear;
+
+
+// Anatomy of a function declarative function
+
+function calcAge(birthYear, firstName) {  // create function name and placeholder parameters that will be used for arugments later
+    // in the braces {} add the block of code for the function to process data
+    const age = 2037 - birthYear; // add variable based on the parameters
+    console.log(`${firstName} is ${age} years old`); // log shows in your developer console based on the formatting of the text so you can see the results of your function to review and test
+    return age; // return statement creates an output of the function to terminate the execution
+}
+
+const age = calcAge(1986, 'Tadeh') // save the function output to a variable
+// Arguments are the actual values passed to the placeholder parameters as input data
+// the parentheses() section is called running, invoking or calling the function that you established earlier
+// note that so long as the function is available in your code you can create different arguments to pass through the function so long as it matches the function name
+
