@@ -270,4 +270,41 @@ console.log(calcAge(1993, 'Tomik'));
 calcAge(1986, 'Tadeh'); // printed by function but not stored in value
 
 
+// ARRAYS //
+
+// BASICS OF ARRAYS
+
+// bundle variables into a bigger groups so the variables don't have to be listed one by one
+
+// one by one 
+const friend1 = 'Michael';
+const friend2 = 'Billy';
+const friend3 = 'Joe';
+
+// create an array (like lists in Python)
+const friendArray = ['Michael', 'Steven', 'Peter'];
+console.log(friendArray);
+
+// another way to create arrays - new Array(value list);
+const yearsArray = new Array(1991, 1984, 2008, 2020);
+
+// get position from index in array
+console.log(friendArray[0]);
+console.log(friendArray[2]);
+
+// get number of items in the array as a count with 'length'
+console.log(friendArray.length); // reports number of elements in the array
+// combine array index with length to select different values in the array like slicing in python
+console.log(friendArray[friendArray.length - 1]);
+
+// mutate or change the array list by replacing the value
+friendArray[2] = 'Jay';
+console.log(friendArray);
+
+// note that the array is a const variable so it shouldn't be able to change because it is a primitive value. However arrays are not a primitive value so you can always change them due to the way JS stores primitives in its memory
+
+// exception is to change the entire array
+// doing so will create a type error like the example below 
+friendArray = ['bob', 'alice']
+
 
