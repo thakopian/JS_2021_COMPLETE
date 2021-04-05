@@ -256,11 +256,11 @@ function calcAge(birthYear, firstName) {  // create function name and placeholde
     return age; // return statement creates an output of the function to terminate the execution
 }
 
-const ageTH = calcAge(1986, 'Tadeh') // save the function output to a variable
+const ageTH = calcAge(1986, 'Tadeh'); // save the function output to a variable
 // Arguments are the actual values passed to the placeholder parameters as input data
 // the parentheses() section is called running, invoking or calling the function that you established earlier
 
-const ageTMK = calcAge(1993, 'Tomik') // stored to value and printed via function command
+const ageTMK = calcAge(1993, 'Tomik'); // stored to value and printed via function command
 // note that so long as the function is available in your code you can create different arguments to pass through the function so long as it matches the function name
 
 console.log(calcAge(1981, 'Andre')); // printed twice but not stored to value
