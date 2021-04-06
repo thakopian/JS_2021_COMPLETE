@@ -281,9 +281,11 @@ const friend1 = 'Michael';
 const friend2 = 'Billy';
 const friend3 = 'Joe';
 
-// create an array (like lists in Python)
+// create an array (like lists in Python you place everything brackets [])
 const friendArray = ['Michael', 'Steven', 'Peter'];
 console.log(friendArray);
+// your console log will also report values of an array like length
+// but that report can't be use for operations elsewhere
 
 // another way to create arrays - new Array(value list);
 const yearsArray = new Array(1991, 1984, 2008, 2020);
@@ -301,10 +303,38 @@ console.log(friendArray[friendArray.length - 1]);
 friendArray[2] = 'Jay';
 console.log(friendArray);
 
-// note that the array is a const variable so it shouldn't be able to change because it is a primitive value. However arrays are not a primitive value so you can always change them due to the way JS stores primitives in its memory
+// note that the array is a const variable so it shouldn't be able to change because it is a primitive value. 
+//However arrays ARE NOT a primitive value so you can always change them due to the way JS stores primitives in its memory
 
 // exception is to change the entire array
-// doing so will create a type error like the example below 
-friendArray = ['bob', 'alice']
+// doing so will create a TYPE ERROR like the example below 
+//friendArray = ['bob', 'alice']
 
+// arrays can also be mixed data types including math and other arrays which will show up as a list within the list
+const tadehArray = ['Tadeh', 'Hakopian', 2021-1986, 'architect', friendArray];
+console.log(tadehArray)
 
+// Exercise with Arrays in a function
+
+// using arrays with function operations to calculate values
+
+// create a normal expressive function for birthyear
+const calcAgeArray = function(birthyear) {
+    return 2037 - birthyear;
+}
+// add an array list
+const yearsBirth = [1990, 1967, 2002, 2010, 2018];
+
+// assign values to each index inlcuding using length
+const ageArray1 = calcAgeArray(yearsBirth[0]);
+const ageArray2 = calcAgeArray(yearsBirth[1]);
+const ageArray3 = calcAgeArray(yearsBirth[yearsBirth.length-1]);
+// log all your new variables
+console.log(ageArray1, ageArray2, ageArray3);
+
+//console.log(calcAgeArray(yearsBirth)); // this method won't work! no a number NAN
+
+// create an array based on the function and index from the original array list
+const ageNewArray = [calcAgeArray(yearsBirth[0]), calcAgeArray(yearsBirth[1]), calcAgeArray(yearsBirth[2]), calcAgeArray(yearsBirth[yearsBirth.length -1])];
+// log your new array
+console.log(ageNewArray);
