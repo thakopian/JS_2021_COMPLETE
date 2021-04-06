@@ -338,3 +338,48 @@ console.log(ageArray1, ageArray2, ageArray3);
 const ageNewArray = [calcAgeArray(yearsBirth[0]), calcAgeArray(yearsBirth[1]), calcAgeArray(yearsBirth[2]), calcAgeArray(yearsBirth[yearsBirth.length -1])];
 // log your new array
 console.log(ageNewArray);
+
+
+// ARRAY METHODS & OPERATIONS //
+
+// start wtih a basic array
+const friendArray2 = ['Michael', 'Steven', 'Peter'];
+
+// push method to add a new index to an array via mutation and returns a new array
+friendArray2.push('Jay');
+console.log(friendArray2);
+// push method can be use in a variable and stored as well
+const newFriendArray = friendArray2.push('Bill');
+// if you log the const value you get the length but not the array in this case so pay attention to how these values work
+console.log(newFriendArray);
+
+
+// unshift method to add index value to beginning of an array
+friendArray2.unshift('John');
+console.log(friendArray2);
+
+// pop removes the last index in an array
+friendArray2.pop(); // last index removed
+
+// can store the popped value in a variable and print that as well
+const popped = friendArray2.pop();
+console.log(popped);
+console.log(friendArray2);
+
+// shift removes first element in index of array
+friendArray2.shift();
+console.log(friendArray2);
+
+// indexOf will tell you which index a given value is in the array
+console.log(friendArray2.indexOf('Steven'));
+// if the value doesn't exist then -1 will be returned
+console.log(friendArray2.indexOf('Bob'));
+
+
+// ES6 method that is like indexOf - called 'includes'
+// returns only boolean values instead of index
+console.log(friendArray2.includes('Steven'));
+console.log(friendArray2.includes('Bob'));
+// includes only works with strict values so there will be no type conversion between numbers and strings for example
+
+
