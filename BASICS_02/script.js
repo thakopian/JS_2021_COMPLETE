@@ -381,5 +381,16 @@ console.log(friendArray2.indexOf('Bob'));
 console.log(friendArray2.includes('Steven'));
 console.log(friendArray2.includes('Bob'));
 // includes only works with strict values so there will be no type conversion between numbers and strings for example
+console.log(friendArray2.includes(23));
 
+
+// true false statements with includes method helps find a value in an array
+// example for true
+if (friendArray2.includes('Peter')) {
+    console.log('You have a friend call Peter');
+}
+// example for false
+if (friendArray2.includes('Jessica')) {
+    console.log('You have a friend call Jessica');
+}
 
