@@ -394,3 +394,7 @@ if (friendArray2.includes('Jessica')) {
     console.log('You have a friend call Jessica');
 }
 
+
+// OBJECTS //
+
+
