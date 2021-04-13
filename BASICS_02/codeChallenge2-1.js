@@ -34,17 +34,17 @@ GOOD LUCK 😀
 
 */
 
-
+// write the  function for average
 function calcAvg(s1,s2,s3) {
     avgScore = (s1+s2+s3)/3;
     return avgScore;
 }
-
-const dScore = calcAvg(65,54,49);
+// set variables to the average functions
+let dScore = calcAvg(65,54,49);
 console.log(dScore);
-const kScore = calcAvg(23,34,27);
+let kScore = calcAvg(23,34,27);
 console.log(kScore);
-
+// write function for returning messages with the stored variables
 const checkWinner = function (dScore, kScore) {
     if (dScore > kScore) {
         console.log('D win!');
@@ -55,4 +55,18 @@ const checkWinner = function (dScore, kScore) {
     }
         
 };
-// the scond part with the winner check does not return anything in console print - could be problem with argument parameters not storing the value from the last operation 
+
+// call the function
+checkWinner(kScore, dScore);
+// problem - the scond part with the winner check does not return anything in console print - could be problem with argument parameters not storing the value from the last operation 
+// solution -  after your write checkwinner call the function at the bottom of the code
+
+// call function with different explicit values returned 
+checkWinner(155, 112);
+
+// reassign the values on the let variables with new averages
+dScore = calcAvg(85,54,41);
+console.log(dScore);
+kScore = calcAvg(44,23,71);
+console.log(kScore);
+checkWinner(kScore, dScore);
