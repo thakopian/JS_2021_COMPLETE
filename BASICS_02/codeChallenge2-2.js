@@ -21,14 +21,23 @@ Test data: 125, 555 and 44
 */
 
 // assign variables
-billArray = [125,555,44];
+const bills = [125,555,44];
 
-function tipCalc(bills) {
-    tipArray = billArray * 4;
-    return bills;
+// create function with ternary operators for value comparison
+// for the ternary operator include the % multiple for the tip
+const calctip = function(bill) {
+    return bill >= 50 && bill <= 300 ? bill * 0.15 :
+    bill * 0.2;
 }
 
-console.log(tipCalc);
+// for the tip value create a new array using the calctip function bills argument
+const tips = [calctip(bills[0]), calctip(bills[1]), calctip(bills[2])];
+console.log(bills, tips);
+
+// for the totals add bills and tips together and log the values
+const totals = [bills[0] + tips[0], bills[1] + tips[1], bills[2] + tips[2]];
+
+console.log(bills, tips, totals);
 
 
 /* 
