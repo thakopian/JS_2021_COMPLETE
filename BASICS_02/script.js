@@ -398,3 +398,34 @@ if (friendArray2.includes('Jessica')) {
 // OBJECTS //
 
 
+// objects rely on key value pairs like dictionaries in python
+// it is like an array but the paired values instead of a list structure
+// pairs can be unordered
+
+const tadehKey = {
+    firstNameKey:'Tadeh',
+    lastNameKey:'Hakopian',
+    ageKey: 2021 - 1986,
+    jobKey: 'Developer',
+    friendsKey: ['Michael', 'Peter', 'Steven']
+};
+
+console.log(tadehKey);
+
+
+
+// Dot vs Bracket Notation //
+
+
+// retrieve data from objects in 2 ways
+
+// dot notation - uses property name then a dot '.' followed by the value
+
+console.log(tadehKey.firstNameKey);
+
+// bracket notation - use property name and bracket with string expression inside to call value
+// this method is useful for template literals concatenations
+
+console.log(tadehKey['firstNameKey']);
+
+
