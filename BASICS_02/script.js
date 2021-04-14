@@ -412,10 +412,7 @@ const tadehKey = {
 
 console.log(tadehKey);
 
-
-
 // Dot vs Bracket Notation //
-
 
 // retrieve data from objects in 2 ways
 
@@ -428,4 +425,52 @@ console.log(tadehKey.firstNameKey);
 
 console.log(tadehKey['firstNameKey']);
 
+// you can assign the values to a variable and create a new value
+// take the COMMON value from your object like 'Namekey' and you can combine it with other values to create new values like the example below:
+
+const nameKey = 'NameKey';
+console.log(tadehKey['first' + nameKey]);
+console.log(tadehKey['last' + nameKey]);
+
+
+// use prompt with a variable for notation
+// if you are accessing a value with nothing in it then it is undefined
+
+/* commented out due to pop up message
+
+const interestedIn = prompt('what do you want to know about Tadeh? Choose between firstName, lastName, age, job and friends');
+console.log(tadehKey[interestedIn]);
+
+
+if (tadehKey[interestedIn]) {
+    console.log(tadehKey[interestedIn]);
+} else {
+    console.log('Wrong request! choose from the REAL list!');
+}
+
+*/
+
+// add values to your existing object key value pairs
+
+tadehKey.location = 'USA'
+tadehKey['twitter'] = '@tadeh_hakopian'
+console.log(tadehKey);
+
+// Challenge portion!
+// return the following statement = "Tadeh has 3 friends, and his brest friend is Michael"
+
+// write everything in console log with template literals 
+// first store the first name from your object into the literal
+// then add the length of your friendsKey with the .length method
+// at the end at the friendsKey index value for Michael
+
+console.log(`${tadehKey.firstNameKey} has ${tadehKey.friendsKey.length} friends, and his best friend is called ${tadehKey.friendsKey[0]}`);
+
+// dot and bracket notation follow orders of operation executing left to right in the statement
+
+
+
+// OBJECT METHODS //
+
+// Functions are values and you can add functions to objects with methods
 
