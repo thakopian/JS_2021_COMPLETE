@@ -494,4 +494,4 @@ if (ternAge >= 18) {
 console.log(ternDrink2);
 
 
-// END OF PART 1 FUNDAMENTALS
+// END OF PART 1 FUNDAMENTALS //
