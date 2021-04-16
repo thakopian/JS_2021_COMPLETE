@@ -473,4 +473,25 @@ console.log(`${tadehKey.firstNameKey} has ${tadehKey.friendsKey.length} friends,
 // OBJECT METHODS //
 
 // Functions are values and you can add functions to objects with methods
+// you can create a key-value pair where the function is a value
+
+const TomKey = {
+    firstNameKey:'Tom',
+    lastNameKey:'Hakopian',
+    birthYear: 1993,
+    jobKey: 'Counselor',
+    friendsKey: ['Michael', 'Peter', 'Steven'],
+    hasDriversLicense: true,
+    // create the function below as an EXPRESSION within the object 
+    // any function attached to an object is called a METHOD
+    calcAge: function(birthYear) {
+        return 2037 - birthYear;
+    }
+};
+
+// log the function from the object
+console.log(TomKey.calcAge(1993));
+// can also be logged with the bracket notation since it is an object
+console.log(TomKey['calcAge'](1993));
+
 
