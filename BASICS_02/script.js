@@ -529,6 +529,8 @@ console.log(TomKey['calcAge'](1993));
 //console.log(TomKey.getSentence());
 
 
+
+
 // LOOPS //
 
 // loops help you automate repetitive tasks
@@ -579,6 +581,9 @@ console.log(types);
 
 
 // example 2 with push and length methods 
+// create an array and an empty array
+// set the for loop condition with length method counting the len of the array
+// use push method to add values to ages2 empty list
 
 const years2 = [1991, 2007, 1969, 2020];
 const ages2 = [];
@@ -590,5 +595,114 @@ for (let i = 0; i < years2.length; i++) {
 console.log(ages2);
 
 
-// breaking and continue
 
+
+// CONTINUE
+
+// continue statement keeps executing a code if it meets a given condition
+// useful for avoiding errors that would otherwise crash the code
+console.log('---ONLY STRINGS WILL BE SHOW BELOW---')
+for (let i = 0; i < tadehKey2.length; i++) {
+    if(typeof tadehKey2[i] !== 'string') continue;
+
+    console.log(tadehKey2[i], typeof tadehKey2[i]);
+}    
+
+
+
+// BREAK
+
+
+// break statement stops executing the code at a condition
+// in the code below the loop will stop running when a number appears
+// useful for stopping the code at a designated point
+console.log('---BREAK WITH NUMBER WILL BE SHOW BELOW---')
+for (let i = 0; i < tadehKey2.length; i++) {
+    if(typeof tadehKey2[i] === 'number') break;
+
+    console.log(tadehKey2[i], typeof tadehKey2[i]);
+}    
+
+
+
+// LOOP BACKWARDS
+
+// same concept and formatting as a regular for loop but with different conditions
+
+const tadehArray2 = [
+    'Tadeh',
+    'Hakopian',
+    2021 - 1986,
+    'Developer',
+    ['Michael', 'Peter', 'Steven'],
+];
+
+
+
+// create the for() loop statement
+// let i equal to the array name and length method
+// length is minus one so you start from the end
+// condition is i greater than 0 because you are counting down to 0
+// i becomes minues since you are going from highest to lower written as i--
+for(let i = tadehArray2.length - 1; i >= 0; i--) {
+    console.log(tadehArray2[i]);
+}
+
+
+
+
+// LOOPS IN LOOPS
+
+// same concept as a regular loop
+// you nest a for loop inside a for loop brace
+// the console log can use template literals for both variable statements to make messages
+
+for (let exercise = 1; exercise < 4; exercise++) {
+    console.log(`------ Start this Exercise ${exercise} `);
+
+    for (let rep = 1; rep < 6; rep++) {
+        console.log(`Exercise ${exercise}; weight rep ${rep}`);
+    }
+}
+
+
+
+// WHILE LOOP
+
+// while loops are similar to for loops
+// useful when you do not know how many iterations will occur
+// lets a statement keep iterating through many values until the while condition is not met
+
+// For loop example 1
+
+for(let i = 1; i <= 5; i++) {
+    console.log(`lifting weights ${i} with for loops`);    
+}
+
+// While loop example 1
+
+let rep = 1;
+while (rep <=10) {
+    console.log(`While: lifting weights reps ${rep} with while loops`);
+    rep++;
+}
+
+
+// random dice throws with while loop 
+
+// set dice varaible equal to a formula
+
+let dice = Math.trunc(Math.random() * 6) + 1;
+console.log(dice);
+
+// random while loop with if statement
+// while the dice is not equal to 6 keep throwing
+// set the console log, dice variable and if statement
+// the if statement can return a string to inform the user that while condition is met
+
+while (dice !== 6) {
+    console.log(`You rolled a ${dice}`);
+    dice = Math.trunc(Math.random() * 6) + 1;
+    if (dice === 6) console.log(`loop is about to end...`);
+
+}
