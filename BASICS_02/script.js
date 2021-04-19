@@ -528,3 +528,67 @@ console.log(TomKey['calcAge'](1993));
 // write the console string
 //console.log(TomKey.getSentence());
 
+
+// LOOPS //
+
+// loops help you automate repetitive tasks
+
+// create a loop for reps at the gym:
+
+// for loop keeps running while condiition is true
+// create a new loop with 'for'
+// create the i variable for storing values (i means interation but can be any word as a variable)
+// add a counter starting at 1
+// next part is a ; with the variable using a boolean value to check statement
+// last part is to state the counter increase per loop
+// rep = i + 1 can be weritten as i++
+// you can add a console log like a function after the loop
+for(let i = 1; i <= 5; i++) {
+    console.log(`lifting weights ${i}`);    
+}
+
+
+// looping through arrays
+
+// copy an array (not object) from earlier
+const tadehKey2 = [
+    'Tadeh',
+    'Hakopian',
+    2021 - 1986,
+    'Developer',
+    ['Michael', 'Peter', 'Steven'],
+    true
+];
+// a new empty array for types you can create with the for loop
+const types = [];
+
+// build the for loop in js
+// for() contains the variable, boolean and counter like last time
+// within the for loop you can console log the index of each array
+
+for (let i = 0; i < 5; i++) {
+    // console each array through index 5 then check tyepof eac index in the array
+    console.log(tadehKey2[i], typeof tadehKey2[i]);
+    // iterate the array into types list which is equal to the type of
+    types[i] = typeof tadehKey2[i];
+    // alternate type array creation with type.push method
+    //types.push(typeof tadehKey2[i]);
+}
+
+console.log(types);
+
+
+// example 2 with push and length methods 
+
+const years2 = [1991, 2007, 1969, 2020];
+const ages2 = [];
+
+for (let i = 0; i < years2.length; i++) {
+    ages2.push(2037 - years2[i]);
+}    
+
+console.log(ages2);
+
+
+// breaking and continue
+
