@@ -484,9 +484,34 @@ const TomKey = {
     hasDriversLicense: true,
     // create the function below as an EXPRESSION within the object 
     // any function attached to an object is called a METHOD
+    /*
     calcAge: function(birthYear) {
         return 2037 - birthYear;
     }
+    */
+
+    /*
+    // use the THIS keyword to reference the object itself when creating a function
+    // avoids hardcoding the name of the object and is part of the DRY principles
+
+    // method below reference the object and values
+    calcAge: function () {
+        console.log(this);
+        return 2037 - TomKey.birthYear;
+    }
+    */
+
+    // method below reference the object values only
+    calcAge: function () {
+        this.age = 2037 - this.birthYear;
+        return this.age;
+    }
+
+    // create a function to write a string and return it
+    getSummary: function () {
+        return `${this.firstNameKey} is a ${this.calcAge()} -year old ${TomKey.job}, and he has ${this.hasDriversLicense ? 'a' : 'no'} driver's license. `
+    }
+
 };
 
 // log the function from the object
@@ -494,4 +519,9 @@ console.log(TomKey.calcAge(1993));
 // can also be logged with the bracket notation since it is an object
 console.log(TomKey['calcAge'](1993));
 
+// chalenge with object-key values - write the below statement with the object example below
+// Tom  is a 51 year old teacher, and he has a driver's license
+
+// write the console string
+console.log(TomKey.getSummary());
 
