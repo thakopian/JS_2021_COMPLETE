@@ -507,10 +507,13 @@ const TomKey = {
         return this.age;
     }
 
+    /*
+    // following code returns an unexpected identifier error, not sure the cause
     // create a function to write a string and return it
-    getSummary: function () {
-        return `${this.firstNameKey} is a ${this.calcAge()} -year old ${TomKey.job}, and he has ${this.hasDriversLicense ? 'a' : 'no'} driver's license. `
+    getSentence: function () {
+        return `${this.firstNameKey} is a ${this.calcAge()} -year old ${TomKey.jobKey}, and he has ${this.hasDriversLicense ? 'a' : 'no'} driver's license. `
     }
+    */
 
 };
 
@@ -523,5 +526,5 @@ console.log(TomKey['calcAge'](1993));
 // Tom  is a 51 year old teacher, and he has a driver's license
 
 // write the console string
-console.log(TomKey.getSummary());
+//console.log(TomKey.getSentence());
 
