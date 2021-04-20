@@ -38,14 +38,61 @@ length of the array (because that's the number of elements)
 */
 
 // assign variables
-const bills = [125,555,44];
+const bills = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52];
+const tips = [];
+const totals = [];
 
 // create function with ternary operators for value comparison
 // for the ternary operator include the % multiple for the tip
-const calctip = function(bill) {
-    return bill >= 50 && bill <= 300 ? bill * 0.15 :
-    bill * 0.2;
+const calctip = function(bills) {
+    return bills >= 50 && bills <= 300 ? bills * 0.15 :
+    bills * 0.2;
 }
+
+// run the values for bills through the for loop
+// push the calctip function output into the array
+// push the arrays of bills and tips added up to the totals array
+for (let i = 0; i < bills.length; i++) {
+    tips.push(calctip(bills[i]));
+    totals.push(bills[i] + tips[i]);
+
+}
+
+console.log(bills);
+console.log(tips);
+console.log(totals);
+
+// create a function with arguments for getting average values in each array
+
+const calcAverage = function(arr) {
+    let sum = 0;
+    for (let i = 0; i < arr.length; i++) {
+        sum += arr[i];
+    }
+    return sum / arr.length;
+}
+console.log(calcAverage([2,3,7]));
+console.log(calcAverage(totals));
+console.log(calcAverage(tips));
+
+
+/*
+ternary operator can be written as a regular if/else expression
+
+function calcTip(bill) {
+    if (bill >= 50 && bill <= 300)
+        return bill * 0.15;
+    else
+        return bill * 0.2;
+}
+*/
+
+
+
+
+
+
+/*
 
 // for the tip value create a new array using the calctip function bills argument
 const tips = [calctip(bills[0]), calctip(bills[1]), calctip(bills[2])];
@@ -56,6 +103,7 @@ const totals = [bills[0] + tips[0], bills[1] + tips[1], bills[2] + tips[2]];
 
 console.log(bills, tips, totals);
 
+*/
 
 /* 
 // ternary operator in this case states a variable then the low end of the value and the high end of the value (list variable each time) followed by the ternary
