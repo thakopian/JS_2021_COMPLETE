@@ -18,3 +18,22 @@ const calcAge = birthYear => 2037 - birthYear;
 // modify snippet to use 'log' to write the console.log() function
 
 console.log();
+
+// add auto close tag ext
+// add image preview ext
+// add eslint ext
+// add settings sync ext
+// add monokai pro ext
+// add todo hightlight ext
+
+// add live server ext
+// open live server in your browser
+
+// check console log in live server browser
+console.log(1950);
+
+// check terminal in script.js
+// menu > terminal / ^- > cmd+k for clear
+// check nodejs in terminal > node -v
+// install live server with npm terminal CLI > npm install live-server -g
+// check live server runnoing with gitbash CLI > liver-server
