@@ -21,3 +21,22 @@ document.querySelector('.score').textContent = 10;
 // add a DOM selector with a class and argument for value b/c of the input field in html requires a value
 document.querySelector('.guess').value = 23;
 console.log(document.querySelector('.guess').value);
+
+// ADD EVENT LISTENER //
+
+// When you click on a button something should happen = event listener
+// look for html class for the button you want to listen for an action
+// the event listener can then tie into the event handler to trigger an action
+
+// create an event listener with querySelector and addEventListener methods
+// after the event listener create an EVENT HANDLER with the html class, a function
+// and stipulate what the next action will be like another html value being updated
+
+document.querySelector('.check').addEventListener('click', function () {
+  const guess = Number(document.querySelector('.guess').value);
+  console.log(guess, typeof guess);
+
+  if (!guess) {
+    document.querySelector('.message').textContent = 'No number!';
+  }
+});
