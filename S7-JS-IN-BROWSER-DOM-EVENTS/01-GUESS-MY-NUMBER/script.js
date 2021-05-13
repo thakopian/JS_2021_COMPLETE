@@ -36,6 +36,8 @@ const number = Math.random();
 // after the event listener create an EVENT HANDLER with the html class, a function
 // and stipulate what the next action will be like another html value being updated
 
+// CHECK THE FOLLOWING SEGMENT AGAINST DEMO CODE:
+
 const secretMumber = Math.trunc(Math.random() * 20) + 1;
 document.querySelector('.number').textContent = secretMumber;
 
