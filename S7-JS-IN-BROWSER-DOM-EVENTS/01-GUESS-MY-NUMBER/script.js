@@ -22,11 +22,9 @@ document.querySelector('.score').textContent = 10;
 document.querySelector('.guess').value = 23;
 console.log(document.querySelector('.guess').value);
 
-
 // create a randokm number operator for the guessing game
 
 const number = Math.random();
-
 
 // ADD EVENT LISTENER //
 
@@ -38,15 +36,16 @@ const number = Math.random();
 // after the event listener create an EVENT HANDLER with the html class, a function
 // and stipulate what the next action will be like another html value being updated
 
-
+const secretMumber = Math.trunc(Math.random() * 20) + 1;
+document.querySelector('.number').textContent = secretMumber;
 
 document.querySelector('.check').addEventListener('click', function () {
   const guess = Number(document.querySelector('.guess').value);
   console.log(guess, typeof guess);
-  // add input value containing nothing message with a false boolean if cunction
+  // add input value containing nothing message with a false boolean 'if' function
   if (!guess) {
     document.querySelector('.message').textContent = 'No number!';
+  } else if (guess === secretNumber) {
+    document.querySelector('.message').textContent = 'Correct Number!';
   }
 });
-
-
