@@ -21,3 +21,9 @@ https://github.com/jonasschmedtmann/complete-javascript-course
 * Practice your skills with 50+ challenges and assignments (solutions included)
 * Get downloadable lectures and friendly support in the Q&A area
 * Design your unique learning path according to your goals: course pathways
+
+
+# Planning Board
+Notion
+
+https://www.notion.so/bc4cf66486164a8da40302d71b9c953e?v=0deba5222de643ee9903019b05838f79&p=f7ec308f715d4bd7a6d67b61dc81ad94
