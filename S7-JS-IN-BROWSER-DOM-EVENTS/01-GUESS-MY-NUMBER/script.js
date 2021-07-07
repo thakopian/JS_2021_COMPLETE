@@ -38,7 +38,7 @@ const number = Math.random();
 
 // CHECK THE FOLLOWING SEGMENT AGAINST DEMO CODE:
 
-const secretNumber = Math.trunc(Math.random() * 20) + 1;
+let secretNumber = Math.trunc(Math.random() * 20) + 1;
 let score = 20;
 document.querySelector('.number').textContent = secretNumber;
 
@@ -79,3 +79,25 @@ document.querySelector('.check').addEventListener('click', function () {
     document.querySelector('.score').textContent = score;
   }
 });
+
+
+// challenge #1
+// add a new button to repeat the game after finishing a round
+
+// hint - add a new query selector and event listener for the 'again' button
+
+document.querySelector('.again').addEventListener('click', function() {
+  // start with 20 for score since that is the total
+  score = 20  
+  // add the formula for secret number from above
+  secretNumber = Math.trunc(Math.random() * 20) + 1;
+  // query for message
+  document.querySelector('.message').textContent = 'Start guessing...';
+  // query for score
+  document.querySelector('.score').textContent = score;
+  // query for number
+  document.querySelector('.number').textContent = 'textContent = '?';
+  // query for guess
+  document.querySelector('.guess').value = '';
+
+})
